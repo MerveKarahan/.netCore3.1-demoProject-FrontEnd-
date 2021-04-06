@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 
@@ -13,7 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [
     AppComponent,
     BrandComponent,
-    NavbarComponent
+    NavbarComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,
