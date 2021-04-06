@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ColorComponent } from './components/color/color.component';
+import { CustomerComponent } from './components/customer/customer.component';
 
 
 
@@ -15,7 +16,8 @@ import { ColorComponent } from './components/color/color.component';
     AppComponent,
     BrandComponent,
     NavbarComponent,
-    ColorComponent
+    ColorComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
