@@ -1,44 +1,57 @@
-<div class="container" style="margin-top:50px ;"> 
-   
-    <div class="row">     
-        <div class="col-md-12">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Markalar</h3>
-              <div class="pull-right">
-                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                  <i class="glyphicon glyphicon-filter"></i>
-                </span>
+
+
+
+
+
+
+ <!--MDB Tables-->
+ <div class="container mt-5">
+
+
+  <div class="card mb-4">
+      <div class="card-body" style="background-color: #d7c4f640;">
+          <!-- Grid row -->
+          <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-12">
+                  <h2 class="pt-3 pb-4  font-bold font-up deep-purple-text">Markalar</h2>
+                  <div class="input-group md-form form-sm form-2 pl-0">
+                      <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Marka giriniz.." aria-label="Search">
+                     
+                  </div>
               </div>
-            </div>
-            <div class="panel-body" style="padding: 10px 0px;">
-              <input  type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Marka Yazınız.." />
-            </div>
-            <table  class="table table-light table-hover table-striped table-bordered
-            " >
-                <thead>
+              <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+          <!--Table-->
+          <table class="table table-striped">
+              <!--Table head-->
+              <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">MARKA</th>
-                    <th class="pull-right" style= "width:150px" scope="col"></th>
+                      <th>#</th>
+                      <th>Marka</th>
+                      <th>##</th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let brand of brands">
-                    <th scope="row">{{brand.brandId}}</th>
-                    <td>{{brand.brandName}}</td>
-                    <td style= "width:150px">
-                      <button type="button" class="btn btn-outline-secondary"><i class="fa fa-list" aria-hidden="true"></i>
-                         Arabalar</button></td>
-                    
-                  </tr>
-                </tbody>
-              </table>
-          </div> 
+              </thead>
+              <!--Table head-->
+              <!--Table body-->
+              <tbody>
+                <tr *ngFor="let brand of brands">
+                  <th scope="row">{{brand.brandId}}</th>
+                  <td>{{brand.brandName}}</td>
+                  <td style= "width:150px">
+                    <button type="button" class="btn btn-outline-secondary"><i class="fa fa-list" aria-hidden="true"></i>
+                       Arabalar</button></td>
+                  
+                </tr>
+                
+              </tbody>
+              <!--Table body-->
+          </table>
+          <!--Table-->
+      </div>
+  </div>
 
-              
 
-
-        </div>
-    </div>
 </div>
+<!--MDB Tables-->
