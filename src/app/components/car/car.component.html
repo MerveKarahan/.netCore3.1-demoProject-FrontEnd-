@@ -33,6 +33,7 @@
                 <th >Yıl</th>
                 <th >Günlük Fiyat</th>
                 <th >Açıklama</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -44,6 +45,9 @@
                 <td>{{car.modelYear}}</td>
                 <td>{{car.dailyPrice}}</td>
                 <td>{{car.description}}</td>
+               <td style= "width:150px">
+                  <button type="button" routerLink="/cars/{{car.carId}}" class="btn btn-outline-secondary"><i class="fa fa-eye" aria-hidden="true"></i>
+                     Detaylar</button></td>
               </tr>
             </tbody>
           </table>
