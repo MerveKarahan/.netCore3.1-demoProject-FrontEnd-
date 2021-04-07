@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { CarComponent } from './components/car/car.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 
 
@@ -19,7 +20,8 @@ import { CarComponent } from './components/car/car.component';
     NavbarComponent,
     ColorComponent,
     CustomerComponent,
-    CarComponent
+    CarComponent,
+    RentalComponent
   ],
   imports: [
     BrowserModule,
