@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
 import { Car } from 'src/app/models/car';
 import { BrandService } from 'src/app/services/brand.service';
@@ -14,7 +15,7 @@ export class BrandComponent implements OnInit {
   brands: Brand[] = []
   cars:Car[]=[]
   filterText="";
-  constructor(private brandService: BrandService, private carService: CarService) { }
+  constructor(private brandService: BrandService, private carService: CarService, private toastrService:ToastrService) { }
 
   ngOnInit(): void {
     this.getBrand()
@@ -26,6 +27,7 @@ export class BrandComponent implements OnInit {
       this.brands = response.data
       console.log("component")
       console.log(this.brands)
+      this.toastrService.info("markalar çekildi","UYARI")
     })
 
   }
