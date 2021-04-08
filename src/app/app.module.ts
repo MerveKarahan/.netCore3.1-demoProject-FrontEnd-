@@ -16,7 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { ColorFilterPipePipe } from './pipes/color-filter-pipe.pipe';
 import { CarFilterPipePipe } from './pipes/car-filter-pipe.pipe';
 import { ToastrModule } from 'ngx-toastr';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component'
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
     CarDetailComponent,
     BrandFilterPipePipe,
     ColorFilterPipePipe,
-    CarFilterPipePipe
+    CarFilterPipePipe,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

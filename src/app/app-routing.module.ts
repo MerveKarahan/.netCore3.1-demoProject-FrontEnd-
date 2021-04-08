@@ -5,16 +5,21 @@ import { CarDetailComponent } from './components/car/car-detail/car-detail.compo
 import { CarComponent } from './components/car/car.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { RentalComponent } from './components/rental/rental.component';
 
 const routes: Routes = [
-  { path: "brands", component:BrandComponent},
-  {path:"colors",component:ColorComponent},
-  {path:"customers",component:CustomerComponent},
-  {path:"cars",component:CarComponent},
+  { path: "brands", component: BrandComponent },
+  { path: "colors", component: ColorComponent },
+  { path: "customers", component: CustomerComponent },
+  { path: "cars", component: CarComponent },
   { path: "cars/:carId", component: CarDetailComponent },
-  {path:"rentals",component:RentalComponent},
+  { path: "rentals", component: RentalComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
   { path: "**", redirectTo: "cars", pathMatch: "full" }
+
 
 ];
 
