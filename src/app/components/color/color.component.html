@@ -27,12 +27,17 @@
               <tr>
                 <th >#</th>
                 <th >Renk</th>
+                <th>##</th>
+                
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let color of colors">
                 <th scope="row">{{color.colorId}}</th>
                 <td>{{color.colorName}}</td>
+                <td style= "width:150px">
+                  <button (click)="getCarsByColorId(color.colorId)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-secondary"><i class="fa fa-list" aria-hidden="true"></i>
+                     Arabalar</button></td>
               </tr>
             </tbody>
           </table>
@@ -43,3 +48,45 @@
 
 </div>
 <!--MDB Tables-->
+
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Arabalar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="cars.length>0">
+
+
+
+          <ol class="list-group list-group-numbered">
+            <li *ngFor="let car of cars" class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div  class="fw-bold font-weight-bold" > {{car.carName}}</div>
+                <span class="font-weight-light">{{car.description}}</span>
+               
+              </div>
+              <span class="badge  rounded-pill " style="color:white;background-color: #4a278adb; font-size: 16px !important; margin-top: 12px;">{{car.dailyPrice}} ₺ </span>
+            </li>
+          </ol>
+
+
+        </div>
+        <div *ngIf="cars.length==0"> 
+          Bu Renge Ait Araç Yok.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
