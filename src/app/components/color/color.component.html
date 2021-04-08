@@ -13,7 +13,7 @@
               <div class="col-md-12">
                   <h2 class="pt-3 pb-4  font-bold font-up deep-purple-text">Renkler</h2>
                   <div class="input-group md-form form-sm form-2 pl-0">
-                      <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Renk giriniz.." aria-label="Search">
+                      <input class="form-control my-0 py-1 pl-3 purple-border" type="text" [(ngModel)]="filterText" id="filterText" placeholder="Renk giriniz.." aria-label="Search">
                      
                   </div>
               </div>
@@ -32,7 +32,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let color of colors">
+              <tr *ngFor="let color of colors | colorFilterPipe:filterText">
                 <th scope="row">{{color.colorId}}</th>
                 <td>{{color.colorName}}</td>
                 <td style= "width:150px">

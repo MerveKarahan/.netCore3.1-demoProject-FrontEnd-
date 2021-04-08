@@ -12,6 +12,7 @@ import { ColorService } from 'src/app/services/color.service';
 export class ColorComponent implements OnInit {
   colors: Color[] = []
   cars: Car[] = []
+  filterText=""
 
   constructor(private colorService: ColorService, private carService: CarService) { }
 

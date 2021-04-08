@@ -14,7 +14,7 @@
               <div class="col-md-12">
                   <h2 class="pt-3 pb-4  font-bold font-up deep-purple-text">Araçlar</h2>
                   <div class="input-group md-form form-sm form-2 pl-0">
-                      <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Renk giriniz.." aria-label="Search">
+                      <input class="form-control my-0 py-1 pl-3 purple-border" type="text" [(ngModel)]="filterText" id="filterText" placeholder="Araç giriniz.." aria-label="Search">
                      
                   </div>
               </div>
@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let car of cars">
+              <tr *ngFor="let car of cars | carFilterPipe:filterText">
                 <th scope="row">{{car.carId}}</th>
                 <td>{{car.carName}}</td>
                 <td>{{car.brandName}}</td>

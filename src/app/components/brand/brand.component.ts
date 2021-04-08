@@ -13,6 +13,7 @@ export class BrandComponent implements OnInit {
 
   brands: Brand[] = []
   cars:Car[]=[]
+  filterText="";
   constructor(private brandService: BrandService, private carService: CarService) { }
 
   ngOnInit(): void {
