@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"cars",component:CarComponent},
   { path: "cars/:carId", component: CarDetailComponent },
   {path:"rentals",component:RentalComponent},
-  { path: "**", redirectTo: "brands", pathMatch: "full" }
+  { path: "**", redirectTo: "cars", pathMatch: "full" }
 
 ];
 
