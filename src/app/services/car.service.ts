@@ -24,4 +24,7 @@ getCarById(carId:number):Observable<SingleResponseModel<CarDTO>>{
 getCarsByBrandId(brandId:number):Observable<ListResponseModel<Car>>{
   return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"Cars/getcarbybrandid?brandId="+brandId)
 }
+getCarsByColorId(colorId:number):Observable<ListResponseModel<Car>>{
+  return this.httpClient.get<ListResponseModel<Car>>(this.baseUrl+"Cars/getcarsbycolorid?colorId="+colorId)
+}
 }
