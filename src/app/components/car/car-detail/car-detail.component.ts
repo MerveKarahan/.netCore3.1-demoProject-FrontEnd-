@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CarDTO } from 'src/app/models/carDTO';
 import { CarService } from 'src/app/services/car.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-car-detail',
@@ -10,7 +11,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarDetailComponent implements OnInit {
 carDetail!:CarDTO
-  constructor(private carService:CarService,private activatedRoute: ActivatedRoute) { }
+  constructor(private carService:CarService,private activatedRoute: ActivatedRoute, private localStorageService:LocalStorageService) { }
 
   ngOnInit(): void {
 this.activatedRoute.params.subscribe(params=>{
@@ -26,5 +27,8 @@ this.activatedRoute.params.subscribe(params=>{
 
       console.log(this.carDetail)
     })
+  }
+  loggedIn() {
+    return this.localStorageService.getToken() != null ? true : false
   }
 }
