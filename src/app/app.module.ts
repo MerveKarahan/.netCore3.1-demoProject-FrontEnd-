@@ -20,7 +20,13 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { ChangePasswordComponent } from './components/change-password/change-password.component'
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { BrandUpdateComponent } from './components/brand/brand-update/brand-update.component';
+import { ColorAddComponent } from './components/color/color-add/color-add.component';
+import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
+import { CarUpdateComponent } from './components/car/car-update/car-update.component';
+import { CarAddComponent } from './components/car/car-add/car-add.component'
 
 
 @NgModule({
@@ -39,7 +45,13 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
     LoginComponent,
     RegisterComponent,
     UserProfileComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    BrandAddComponent,
+    BrandUpdateComponent,
+    ColorAddComponent,
+    ColorUpdateComponent,
+    CarUpdateComponent,
+    CarAddComponent
   ],
   imports: [
     BrowserModule,
