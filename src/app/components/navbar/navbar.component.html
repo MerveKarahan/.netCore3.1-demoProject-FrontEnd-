@@ -28,11 +28,26 @@
 
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <div>
+      <div *ngIf="loggedIn()==false"> 
         <button type="button" class="btn btn-dark" routerLink="login">Giriş</button>
         <button type="button" class="btn btn-light " routerLink="register" style="margin-left: 13px;">Kayıt Ol</button>
       </div>
+      <div *ngIf="loggedIn()">
 
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            merve karahan
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Profilim</a>
+            <a class="dropdown-item" href="#">Kredi Kartlarım</a>
+            <a class="dropdown-item" (click)="logOut()">Çıkış Yap</a>
+          </div>
+        </div>
+        
+
+      </div>
     </div>
   </div>
 </nav>

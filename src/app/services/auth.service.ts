@@ -4,6 +4,7 @@ import { Login } from '../models/login';
 import { Register } from '../models/register';
 import { SingleResponseModel } from '../models/single-response-model';
 import { TokenModel } from '../models/token-model';
+import { LocalStorageService } from './local-storage.service';
 
 
 
@@ -22,4 +23,6 @@ export class AuthService {
   register(registerModel:Register){
     return this.httpClient.post<SingleResponseModel<TokenModel>>(this.baseUrl+"Auth/register",registerModel)
   }
+
+
 }

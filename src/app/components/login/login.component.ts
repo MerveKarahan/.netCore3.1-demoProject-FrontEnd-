@@ -39,7 +39,11 @@ export class LoginComponent implements OnInit {
           return this.toastrService.error(response.message, "Giriş Başarısız!")
         }
 
+      },error=>{
+        return this.toastrService.error(error.error)
       })
+      
+
     }
     else {
       return this.toastrService.error("Model valid değil", "HATA!!")
