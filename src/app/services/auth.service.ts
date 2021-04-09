@@ -25,8 +25,6 @@ export class AuthService {
   register(registerModel:Register){
     return this.httpClient.post<SingleResponseModel<TokenModel>>(this.baseUrl+"Auth/register",registerModel)
   }
-changePassword(changePassword:ChangePassword){
-  return this.httpClient.post<ResponseModel>(this.baseUrl+"Users/changepassword",changePassword)
-}
+
 
 }

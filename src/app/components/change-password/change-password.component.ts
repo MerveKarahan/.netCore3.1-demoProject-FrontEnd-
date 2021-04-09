@@ -39,14 +39,14 @@ export class ChangePasswordComponent implements OnInit {
     if (this.changePasswordForm.valid) {
       let changePasswordModel = Object.assign({}, this.changePasswordForm.value)
       console.log(changePasswordModel)
-      this.authService.changePassword(changePasswordModel).subscribe(response => {
+      this.userService.changePassword(changePasswordModel).subscribe(response => {
 
         if (response.success) {
           return this.toastrService.success(response.message, "Şifre Başarılı")
 
         }
         else {
-          return this.toastrService.error(response.message, "Giriş Başarısız!")
+          return this.toastrService.error(response.message, "Şifre Başarısız!")
         }
 
       }, error => {
