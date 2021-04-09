@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrandComponent } from './components/brand/brand.component';
 import { CarDetailComponent } from './components/car/car-detail/car-detail.component';
 import { CarComponent } from './components/car/car.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: "brands", component: BrandComponent },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: "rentals", component: RentalComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
+  {path:"profile",component:UserProfileComponent},
+  {path:"changepassword",component:ChangePasswordComponent},
   { path: "**", redirectTo: "cars", pathMatch: "full" }
 
 

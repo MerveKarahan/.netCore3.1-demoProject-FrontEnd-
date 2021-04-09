@@ -18,7 +18,9 @@ import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms"
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component'
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms"
     ColorFilterPipePipe,
     CarFilterPipePipe,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserProfileComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

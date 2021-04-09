@@ -28,7 +28,7 @@
 
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <div *ngIf="loggedIn()==false"> 
+      <div *ngIf="loggedIn()==false">
         <button type="button" class="btn btn-dark" routerLink="login">Giriş</button>
         <button type="button" class="btn btn-light " routerLink="register" style="margin-left: 13px;">Kayıt Ol</button>
       </div>
@@ -36,16 +36,17 @@
 
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{getUserName()}}
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{getUserName()}}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Profilim</a>
-            <a class="dropdown-item" href="#">Kredi Kartlarım</a>
+            <a class="dropdown-item" routerLink="profile">Profilim</a>
+            <a class="dropdown-item" routerLink="changepassword">Şifre Değiştirme</a>
             <a class="dropdown-item" (click)="logOut()">Çıkış Yap</a>
           </div>
         </div>
-        
+
 
       </div>
     </div>
