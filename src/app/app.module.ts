@@ -12,13 +12,13 @@ import { CarComponent } from './components/car/car.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { CarDetailComponent } from './components/car/car-detail/car-detail.component';
 import { BrandFilterPipePipe } from './pipes/brand-filter-pipe.pipe';
-import { FormsModule } from '@angular/forms';
 import { ColorFilterPipePipe } from './pipes/color-filter-pipe.pipe';
 import { CarFilterPipePipe } from './pipes/car-filter-pipe.pipe';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms"
 
 
 @NgModule({
@@ -43,8 +43,10 @@ import { RegisterComponent } from './components/register/register.component'
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
+
     })
   ],
   providers: [],
