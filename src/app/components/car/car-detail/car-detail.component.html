@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="col-md-6">
-          <div class="card-body">
+          <div class="card-body" *ngIf="carDetail != null && customer != null">
             <h3 class="card-title" style="margin-bottom: 0.1em;">{{carDetail.carName}}</h3>
             <p class="card-text"><small class="text-muted">{{carDetail.brandName}}</small></p>
             <p class="card-text font-bold text-primary h4">{{carDetail.dailyPrice}} ₺</p>
@@ -33,7 +33,7 @@
             class="card-text text-secondary h6"> {{carDetail.modelYear}} </span>
             <p class="card-text"><small class="text-muted">{{carDetail.colorName}}</small></p>
             <p class="card-text"><small class="text-muted">Findeks Puanı : {{carDetail.minFindexPoint}}</small></p>
-            <button *ngIf="loggedIn() && carDetail.minFindexPoint< customer.findexPoint" data-toggle="modal" data-target="#exampleModal" type="button"
+            <button *ngIf="loggedIn() && carDetail.minFindexPoint < customer.findexPoint" data-toggle="modal" data-target="#exampleModal" type="button"
              class="btn btn-outline-primary"><i class="fa fa-car" aria-hidden="true"></i> Kirala</button>
              <div *ngIf="loggedIn()==false" class="alert alert-light" role="alert">
               Kiralamak İçin Giriş Yapın
@@ -62,14 +62,15 @@
           </button>
         </div>
         <div class="modal-body">
-          <label for="rentdate"> Kiralama Tarihi</label>
-          <input class="form-control" type="datetime-local" id="rentdate" name="rentdate">
-          <label style="margin-top: 21px;" for="returndate"> Teslim Tarihi</label>
-          <input class="form-control" type="datetime-local" id="returndate" name="returndate">
+          <label for="rentDate"> Kiralama Tarihi</label>
+          <input [(ngModel)]="rental.rentDate" [value]="rental.rentDate" class="form-control" type="date" id="rentDate" name="rentDate">
+          <label style="margin-top: 21px;" for="returnDate"> Teslim Tarihi</label>
+          <input [(ngModel)]="rental.returnDate" [value]="rental.returnDate" class="form-control" type="date" id="returnDate" name="returnDate">
+         
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-          <button type="button" class="btn btn-primary">Kirala</button>
+          <button (click)="RentTheCar()" type="button" class="btn btn-primary">Kirala</button>
         </div>
       </div>
     </div>
