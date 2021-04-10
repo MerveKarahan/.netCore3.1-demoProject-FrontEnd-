@@ -23,6 +23,10 @@
                     <input formControlName="description" class="form-control" placeholder="Açıklama" name="description" type="text">
                 </div>
                 <div class="form-group">
+                    <input formControlName="minFindexPoint" class="form-control" 
+                    placeholder="Findeks Puanı" name="minFindexPoint" type="number">
+                </div>
+                <div class="form-group">
                     <select [(ngModel)]="selectedBrand" class="form-control" formControlName="brandId" >
                         <option value="0"> Marka Seçin</option>
                         <option *ngFor="let brand of brands" [ngValue]="brand.brandId">

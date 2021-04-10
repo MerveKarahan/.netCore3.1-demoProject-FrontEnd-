@@ -53,6 +53,7 @@ export class CarUpdateComponent implements OnInit {
       this.updateForm.controls['dailyPrice'].setValue(parseInt(response.data.dailyPrice.toString()));
       this.updateForm.controls['brandId'].setValue(parseInt(response.data.brandId.toString()));
       this.updateForm.controls['modelYear'].setValue(parseInt(response.data.modelYear.toString()));
+      this.updateForm.controls['minFindexPoint'].setValue(parseInt(response.data.minFindexPoint.toString()));
     
 this.selectedColor=parseInt(response.data.colorId.toString());
 this.selectedBrand=parseInt(response.data.brandId.toString())
@@ -67,7 +68,8 @@ this.selectedBrand=parseInt(response.data.brandId.toString())
       dailyPrice: ["", Validators.required],
       brandId:["", Validators.required],
       description: ["", Validators.required],
-      carId:["",Validators.required]
+      carId:["",Validators.required],
+      minFindexPoint:["",Validators.required]
     })
   }
   update() {

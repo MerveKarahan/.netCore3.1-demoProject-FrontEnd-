@@ -8,5 +8,6 @@ export interface CarDTO {
     modelYear: number,
     dailyPrice: number,
     description: string,
-    carImagesPaths: string[]
+    carImagesPaths: string[],
+    minFindexPoint:number
 }

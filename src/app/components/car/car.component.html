@@ -54,6 +54,7 @@
             <th>Yıl</th>
             <th>Günlük Fiyat</th>
             <th>Açıklama</th>
+            <th>Findeks Puanı</th>
             <th></th>
           </tr>
         </thead>
@@ -66,6 +67,7 @@
             <td>{{car.modelYear}}</td>
             <td>{{car.dailyPrice}}</td>
             <td>{{car.description}}</td>
+            <td>{{car.minFindexPoint}}</td>
             <td style="width:250px">
               <button type="button" routerLink="/cars/detail/{{car.carId}}" class="btn btn-outline-secondary"><i
                   class="fa fa-eye" aria-hidden="true"></i>

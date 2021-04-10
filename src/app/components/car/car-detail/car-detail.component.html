@@ -32,7 +32,7 @@
             <span class="card-text font-bold text-secondary h6"> Model Yılı : </span>  <span 
             class="card-text text-secondary h6"> {{carDetail.modelYear}} </span>
             <p class="card-text"><small class="text-muted">{{carDetail.colorName}}</small></p>
-            
+            <p class="card-text"><small class="text-muted">Findeks Puanı : {{carDetail.minFindexPoint}}</small></p>
             <button *ngIf="loggedIn()" data-toggle="modal" data-target="#exampleModal" type="button"
              class="btn btn-outline-primary"><i class="fa fa-car" aria-hidden="true"></i> Kirala</button>
              <div *ngIf="loggedIn()==false" class="alert alert-light" role="alert">
