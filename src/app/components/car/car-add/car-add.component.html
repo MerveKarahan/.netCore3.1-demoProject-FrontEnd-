@@ -1,1 +1,55 @@
-<p>car-add works!</p>
+<!--MDB Tables-->
+<div class="container mt-5" style="width: 500px;">
+    <div class="card mb-4">
+      <div class="card-body" style="background-color: #d7c4f640;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title" style="margin-bottom: 30px;;">Ekle</h3>
+           </div>
+            <div class="panel-body">
+              <form [formGroup]="addForm" accept-charset="UTF-8" role="form">
+              <fieldset>
+                    <div class="form-group">
+                      <input formControlName="carName" class="form-control" placeholder="Araba" name="carName" type="text">
+                  </div>
+                  
+                  <div class="form-group">
+                    <input formControlName="modelYear" class="form-control" placeholder="Model Yılı" name="modelYear" type="number">
+                </div>
+                <div class="form-group">
+                    <input formControlName="dailyPrice" class="form-control" placeholder="Günlük Fiyat" name="dailyPrice" type="number">
+                </div>
+                <div class="form-group">
+                    <input formControlName="description" class="form-control" placeholder="Açıklama" name="description" type="text">
+                </div>
+                <div class="form-group">
+                    <select [(ngModel)]="selectedBrand" class="form-control" formControlName="brandId" >
+                        <option value="0"> Marka Seçin</option>
+                        <option *ngFor="let brand of brands" [ngValue]="brand.brandId">
+                            {{brand.brandName}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select [(ngModel)]="selectedColor" class="form-control" formControlName="colorId" >
+                        <option value="0"> Renk Seçin</option>
+                        <option *ngFor="let color of colors" [ngValue]="color.colorId">
+                            {{color.colorName}}
+                        </option>
+                    </select>
+                </div>
+                  
+                  <input (click)="add()" style="margin-top: 10px; background-color: #6f42c1e3; border-color: #141516;" 
+                  class="btn btn-lg btn-success btn-block" type="submit" value="Kaydet">
+              </fieldset>
+                </form>
+          </div>
+      </div>
+      </div>
+    </div>
+  
+  
+  </div>
+  <!--MDB Tables-->
+
