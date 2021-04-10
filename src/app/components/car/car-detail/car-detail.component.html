@@ -9,7 +9,7 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" *ngIf="carDetail != null">
                   <div  *ngFor="let carImage of carDetail.carImagesPaths" [class.active]="carDetail.carImagesPaths[0]==carImage" class="carousel-item">
-                      <img style="height: 350px;object-fit: cover;" src="https://localhost:44348/Images/{{carImage}}" class="d-block w-100 mx-auto img-thumbnail" alt="...">
+                      <img style="height: 350px;object-fit: cover;" src="http://localhost:58739/Images/{{carImage}}" class="d-block w-100 mx-auto img-thumbnail" alt="...">
                     </div>
 
               </div>

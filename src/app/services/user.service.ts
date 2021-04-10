@@ -12,7 +12,7 @@ import { User } from '../models/User';
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl="https://localhost:44348/api/"
+  baseUrl="http://localhost:58739/api/"
   jwtHelper: JwtHelperService =new JwtHelperService();
   constructor(private localStorageService:LocalStorageService, private httpClient:HttpClient) { }
 

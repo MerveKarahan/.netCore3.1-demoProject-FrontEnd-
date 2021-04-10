@@ -11,7 +11,7 @@ import { ResponseModel } from '../models/response-model';
 })
 export class BrandService {
 
-  baseUrl="https://localhost:44348/api/"
+  baseUrl="http://localhost:58739/api/"
   constructor(private httpClient:HttpClient) { }
 
 

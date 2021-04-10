@@ -15,7 +15,7 @@ import { LocalStorageService } from './local-storage.service';
 })
 export class AuthService {
 
-  baseUrl="https://localhost:44348/api/"
+  baseUrl="http://localhost:58739/api/"
   constructor(private httpClient:HttpClient) { }
 
   login (loginModel:Login) {
