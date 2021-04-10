@@ -33,10 +33,13 @@
             class="card-text text-secondary h6"> {{carDetail.modelYear}} </span>
             <p class="card-text"><small class="text-muted">{{carDetail.colorName}}</small></p>
             <p class="card-text"><small class="text-muted">Findeks Puanı : {{carDetail.minFindexPoint}}</small></p>
-            <button *ngIf="loggedIn()" data-toggle="modal" data-target="#exampleModal" type="button"
+            <button *ngIf="loggedIn() && carDetail.minFindexPoint< customer.findexPoint" data-toggle="modal" data-target="#exampleModal" type="button"
              class="btn btn-outline-primary"><i class="fa fa-car" aria-hidden="true"></i> Kirala</button>
              <div *ngIf="loggedIn()==false" class="alert alert-light" role="alert">
               Kiralamak İçin Giriş Yapın
+            </div>
+            <div *ngIf="loggedIn() && carDetail.minFindexPoint > customer.findexPoint" class="alert alert-warning" role="alert">
+              Findeks Puanınız Yetersiz!
             </div>
           </div>
         </div>
