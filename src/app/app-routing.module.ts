@@ -13,6 +13,7 @@ import { ColorUpdateComponent } from './components/color/color-update/color-upda
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { LoginComponent } from './components/login/login.component';
+import { PaymentComponent } from './components/payment/payment.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path:"colors/add",component:ColorAddComponent},
   {path:"cars/add",component:CarAddComponent},
   {path:"cars/update/:carId",component:CarUpdateComponent},
+  {path:"payment",component:PaymentComponent},
   {path:"colors/update/:colorId",component:ColorUpdateComponent},
   {path:"brands/update/:brandId",component:BrandUpdateComponent},
   { path: "**", redirectTo: "cars", pathMatch: "full" }

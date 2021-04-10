@@ -26,7 +26,8 @@ import { BrandUpdateComponent } from './components/brand/brand-update/brand-upda
 import { ColorAddComponent } from './components/color/color-add/color-add.component';
 import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
 import { CarUpdateComponent } from './components/car/car-update/car-update.component';
-import { CarAddComponent } from './components/car/car-add/car-add.component'
+import { CarAddComponent } from './components/car/car-add/car-add.component';
+import { PaymentComponent } from './components/payment/payment.component'
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { CarAddComponent } from './components/car/car-add/car-add.component'
     ColorAddComponent,
     ColorUpdateComponent,
     CarUpdateComponent,
-    CarAddComponent
+    CarAddComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
