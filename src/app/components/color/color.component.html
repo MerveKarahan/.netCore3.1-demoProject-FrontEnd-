@@ -11,7 +11,14 @@
           <div class="row">
               <!-- Grid column -->
               <div class="col-md-12">
-                  <h2 class="pt-3 pb-4  font-bold font-up deep-purple-text">Renkler</h2>
+                <div style="display: inline-block;width: 100%;">
+                  <h2 class="pt-3 pb-4  font-bold font-up deep-purple-text" style="display: inline-block;">Renkler</h2>
+                  <button routerLink="add" style="margin: 20px 0px;" type="button" class="btn btn-dark pull-right"> <i class="fa fa-plus"
+                      aria-hidden="true"></i>
+                    Yeni Ekle</button>
+      
+                </div>
+                  
                   <div class="input-group md-form form-sm form-2 pl-0">
                       <input class="form-control my-0 py-1 pl-3 purple-border" type="text" [(ngModel)]="filterText" id="filterText" placeholder="Renk giriniz.." aria-label="Search">
                      
@@ -35,9 +42,13 @@
               <tr *ngFor="let color of colors | colorFilterPipe:filterText">
                 <th scope="row">{{color.colorId}}</th>
                 <td>{{color.colorName}}</td>
-                <td style= "width:150px">
+                <td style= "width:250px">
                   <button (click)="getCarsByColorId(color.colorId)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-secondary"><i class="fa fa-list" aria-hidden="true"></i>
-                     Arabalar</button></td>
+                     Arabalar</button>
+                     <button routerLink="update/{{color.colorId}}" style="margin-left: 12px;" type="button" class="btn btn-dark"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Güncelle</button>
+                    
+                    
+                    </td>
               </tr>
             </tbody>
           </table>

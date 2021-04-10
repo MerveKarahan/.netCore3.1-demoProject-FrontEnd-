@@ -27,7 +27,7 @@ export class BrandComponent implements OnInit {
       this.brands = response.data
       console.log("component")
       console.log(this.brands)
-      this.toastrService.info("markalar çekildi","UYARI")
+     
     })
 
   }

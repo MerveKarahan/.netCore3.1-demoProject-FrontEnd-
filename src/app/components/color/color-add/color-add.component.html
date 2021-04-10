@@ -1,1 +1,28 @@
-<p>color-add works!</p>
+<!--MDB Tables-->
+<div class="container mt-5" style="width: 500px;">
+    <div class="card mb-4">
+      <div class="card-body" style="background-color: #d7c4f640;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title" style="margin-bottom: 30px;;">Ekle</h3>
+           </div>
+            <div class="panel-body">
+              <form [formGroup]="addForm" accept-charset="UTF-8" role="form">
+              <fieldset>
+                    <div class="form-group">
+                      <input formControlName="colorName" class="form-control" placeholder="Renk" name="colorName" type="text">
+                  </div>
+                  
+                  <input (click)="add()" style="margin-top: 10px; background-color: #6f42c1e3; border-color: #141516;" 
+                  class="btn btn-lg btn-success btn-block" type="submit" value="Kaydet">
+              </fieldset>
+                </form>
+          </div>
+      </div>
+      </div>
+    </div>
+  
+  
+  </div>
+  <!--MDB Tables-->
+
