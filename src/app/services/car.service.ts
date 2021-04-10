@@ -32,7 +32,7 @@ getCarsByColorId(colorId:number):Observable<ListResponseModel<Car>>{
     addCar(carModel:Car){
       return this.httpClient.post<ResponseModel>(this.baseUrl+"Cars/add",carModel)
     }
-    updateColor(carModel:Car){
+    updateCar(carModel:Car){
       return this.httpClient.post<ResponseModel>(this.baseUrl+"Cars/update",carModel)
     }
 }

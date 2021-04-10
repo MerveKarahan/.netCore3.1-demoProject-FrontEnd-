@@ -53,9 +53,12 @@
                 <td>{{car.modelYear}}</td>
                 <td>{{car.dailyPrice}}</td>
                 <td>{{car.description}}</td>
-               <td style= "width:150px">
+               <td style= "width:250px">
                   <button type="button" routerLink="/cars/detail/{{car.carId}}" class="btn btn-outline-secondary"><i class="fa fa-eye" aria-hidden="true"></i>
-                     Detaylar</button></td>
+                     Detaylar</button>
+                     <button routerLink="update/{{car.carId}}" style="margin-left: 12px;" type="button" class="btn btn-dark"><i
+                      class="fa fa-pencil-square-o" aria-hidden="true"></i> Güncelle</button></td>
+                     
               </tr>
             </tbody>
           </table>
