@@ -15,6 +15,7 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RentSuccessComponent } from './components/rent-success/rent-success.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:"cars/add",component:CarAddComponent},
   {path:"cars/update/:carId",component:CarUpdateComponent},
   {path:"payment",component:PaymentComponent},
+  {path:"rentSuccess" , component:RentSuccessComponent},
   {path:"colors/update/:colorId",component:ColorUpdateComponent},
   {path:"brands/update/:brandId",component:BrandUpdateComponent},
   { path: "**", redirectTo: "cars", pathMatch: "full" }

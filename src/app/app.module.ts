@@ -27,7 +27,8 @@ import { ColorAddComponent } from './components/color/color-add/color-add.compon
 import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
 import { CarUpdateComponent } from './components/car/car-update/car-update.component';
 import { CarAddComponent } from './components/car/car-add/car-add.component';
-import { PaymentComponent } from './components/payment/payment.component'
+import { PaymentComponent } from './components/payment/payment.component';
+import { RentSuccessComponent } from './components/rent-success/rent-success.component'
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { PaymentComponent } from './components/payment/payment.component'
     ColorUpdateComponent,
     CarUpdateComponent,
     CarAddComponent,
-    PaymentComponent
+    PaymentComponent,
+    RentSuccessComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Payment } from 'src/app/models/payment';
 import { Rental } from 'src/app/models/rental';
@@ -18,7 +19,7 @@ export class PaymentComponent implements OnInit {
   userId!: number
 
   constructor(private userService: UserService, private toastrService: ToastrService,
-    private rentalService: RentalService, private formBuilder: FormBuilder) {
+    private rentalService: RentalService, private formBuilder: FormBuilder,private router: Router) {
     if (localStorage.getItem("rental") != null) {
       this.rental = JSON.parse(localStorage.getItem("rental")?.toString() || '{}')
       //this.payment.rental=this.rental
@@ -49,8 +50,8 @@ export class PaymentComponent implements OnInit {
       this.rentalService.addPayment(this.payment).subscribe(response => {
         if (response.success) {
           localStorage.removeItem("rental")
-          return this.toastrService.success(response.message, "Kiralama Başarılı!")
-
+          localStorage.setItem("creditCard",JSON.stringify(this.payment.creditCardModel))
+         return this.router.navigate(["/rentSuccess"])
 
         }
         else {
