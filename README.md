@@ -25,19 +25,42 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Araçların Listelendiği ve Güncellendiği Yer
 
 ![alt text](https://i.imgur.com/uNBC1wX.png)
+## Araç Detay Sayfası
+
 ![alt text](https://i.imgur.com/OxpVded.png)
+## Kiralama Tarih Seçimi
+
 ![alt text](https://i.imgur.com/RqzlNsF.png)
+## Ödeme Ekranı ve Kayıtlı Kartlar
+
 ![alt text](https://i.imgur.com/KP6EGuG.png)
+## Başarılı Ödeme Ekranı ve Kart Kaydetme
+
 ![alt text](https://i.imgur.com/FoYEtAk.png)
+## Renklerin Listelenip Güncellenebildiği Yer
+
 ![alt text](https://i.imgur.com/8WOK2Id.png)
+## Kiralanma Listesi
+
 ![alt text](https://i.imgur.com/1U9iZsk.png)
+## Müşteri Listesi
+
 ![alt text](https://i.imgur.com/DX26eWH.png)
+## Kullanıcı Profili Düzenleme Sayfası
+
 ![alt text](https://i.imgur.com/gomX60y.png)
+## Şifre Güncelleme Ekranı
+
 ![alt text](https://i.imgur.com/50uKQlQ.png)
+## Araç Ekleme Ekranı
+
 ![alt text](https://i.imgur.com/u5MU9Pv.png)
+## Araç Güncelleme
 ![alt text](https://i.imgur.com/mAJlU0S.png)
+## Renk Seçimine Göre Araç Listesi
 ![alt text](https://i.imgur.com/iqKs9fJ.png)
 
 
