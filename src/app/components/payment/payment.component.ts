@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Card } from 'src/app/models/card';
 import { Payment } from 'src/app/models/payment';
 import { Rental } from 'src/app/models/rental';
+import { CreditCardService } from 'src/app/services/credit-card.service';
 import { RentalService } from 'src/app/services/rental.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -17,9 +19,10 @@ export class PaymentComponent implements OnInit {
   payment!: Payment
   cardForm!: FormGroup
   userId!: number
-
+  userCreditCards: Card[] = []
   constructor(private userService: UserService, private toastrService: ToastrService,
-    private rentalService: RentalService, private formBuilder: FormBuilder,private router: Router) {
+    private rentalService: RentalService, private formBuilder: FormBuilder, private router: Router,
+    private creditCardService: CreditCardService) {
     if (localStorage.getItem("rental") != null) {
       this.rental = JSON.parse(localStorage.getItem("rental")?.toString() || '{}')
       //this.payment.rental=this.rental
@@ -29,7 +32,12 @@ export class PaymentComponent implements OnInit {
   ngOnInit(): void {
     this.userId = this.getUserId()
     this.createCardForm()
-  }
+    this.getUserCreditCards();
+    console.log("Cards")
+    console.log(this.userCreditCards)
+   }
+
+
   createCardForm() {
     this.cardForm = this.formBuilder.group({
       cardHolderName: ["", Validators.required],
@@ -43,6 +51,23 @@ export class PaymentComponent implements OnInit {
     return this.userService.getUserId()
   }
 
+  getUserCreditCards() {
+    
+    this.creditCardService.getCreditCardsByUserId(this.userId).subscribe(response=>{
+       console.log("dsda")
+      console.log(response.data)
+      this.userCreditCards=response.data
+    })
+  }
+
+  loadCard(card : Card){
+    this.cardForm.controls['userId'].setValue(parseInt(card.userId.toString()));
+    this.cardForm.controls['cardHolderName'].setValue(card.cardHolderName.toString());
+    this.cardForm.controls['cardNumber'].setValue(card.cardNumber.toString());
+    this.cardForm.controls['cardExprationDate'].setValue(card.cardExprationDate.toString());
+    this.cardForm.controls['cVV'].setValue(card.cvv.toString());
+  }
+
   paymentCar() {
     if (this.cardForm.valid) {
       let cardModel = Object.assign({}, this.cardForm.value)
@@ -50,8 +75,8 @@ export class PaymentComponent implements OnInit {
       this.rentalService.addPayment(this.payment).subscribe(response => {
         if (response.success) {
           localStorage.removeItem("rental")
-          localStorage.setItem("creditCard",JSON.stringify(this.payment.creditCardModel))
-         return this.router.navigate(["/rentSuccess"])
+          localStorage.setItem("creditCard", JSON.stringify(this.payment.creditCardModel))
+          return this.router.navigate(["/rentSuccess"])
 
         }
         else {
