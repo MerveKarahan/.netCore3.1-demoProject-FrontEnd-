@@ -1,32 +1,20 @@
-# Araç Kiralama Uygulaması
+# Araç Kiralama Uygulaması(Front-End)
 
 
 ### Notlar
-- ReportService'deki Appsetting.Json içinde, Db Bağlantı içi  ConnectionString (PostgreSql) ve RabbitMQ için MessageBrokerOptions değerlerini Değiştirin. 
-- ContactService'deki Appsetting.Json içinde, Db Bağlantı içi  ConnectionString (PostgreSql) ve RabbitMQ için MessageBrokerOptions değerlerini Değiştirin.
-- (İki MessageBrokerOptions içindeki QueueName Aynı Olmalı)
-- SeedData Eklendi.
-- Migration'lar Otomatik Uygulanıyor.
-- Projelerin ikisini Beraber Çalıştırınız..
+- Kullanıcıların giriş ve kayıt olabildiği,sistemdeki araçları görebildiği ve uygun tarihlerde kiralama yapabildiği web uygulaması.
+- Gerekli alanlarda filtreleme ve arama yapılabilir.
+- Back-End kısmında .NetCore WebApi ile besleniyor.
+- Back-End: https://github.com/MerveKarahan/ReCapProject
 
-__
-
-- Zaman Azlığından UnitTest , FluentValidation ,Serilog ,Jwt kullanılmamıştır. Zaman olsaydı Ekleyecektim.
 
  
 ### Teknolojiler
-- .Net Core 3.1
-- MS SQL
-- Angular(Front-End)
-- Autofac
-- AOP(cache,perfonmance,transaction,validation)
-- Fluent Validation
-- JWT
-- .Net Core Wep API
-- Katmanlı Mimari/RepositoryPattern
-- Swagger
-- 
-
+- Angular 10
+- Bootstrap 
+- JQuery
+- Toastr
+- Angular2-JWT(Decode Token)
 
 
 
