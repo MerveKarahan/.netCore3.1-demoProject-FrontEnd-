@@ -1,1 +1,101 @@
-<p>payment works!</p>
+
+
+<!--MDB Tables-->
+<div class="container mt-5">
+    <div class="card mb-4">
+      <div class="card-body" style="background-color: #d7c4f640;">
+        <!-- Grid row -->
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title" style="margin-bottom: 30px;;">Kart Bilgisi</h3>
+                       </div>
+                        <div class="panel-body">
+                          <form [formGroup]="cardForm" accept-charset="UTF-8" role="form">
+                          <fieldset>
+                                <div class="form-group">
+                                  <input  formControlName="cardHolderName"  class="form-control" placeholder="İsim Soyisim" name="cardHolderName" type="text">
+                              </div>
+                              <div class="form-group">
+                                  <input  formControlName="cardNumber" class="form-control" placeholder="Kart Numarası" name="cardNumber" type="text" value="">
+                              </div>
+                              <div class="form-group">
+                                <input  formControlName="cardExprationDate" class="form-control" placeholder="Son Kullanma Tarihi" name="cardExprationDate" type="text" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input  formControlName="cVV" class="form-control" placeholder="CVV" name="cVV" type="text" value="">
+                            </div>
+                           
+                              <input (click)="paymentCar()" style="margin-top: 10px; background-color: #6f42c1e3; border-color: #141516;" 
+                              class="btn btn-lg btn-success btn-block" type="submit" value="Ödeme Yap">
+                          </fieldset>
+                            </form>
+                      </div>
+                  </div>
+                   
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div style="height: 369px;" class="card">
+                <div class="card-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title" style="margin-bottom: 30px;;">Kayıtlı Kartlarım</h3>
+                       </div>
+                        <div class="panel-body">
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                  <div class="ms-2 me-auto">
+                                    <div class="fw-bold">1234567891011121</div>
+                                   merve karahan
+                                  </div>
+                                  <button style="margin-top: 9px;" type="button" class="btn btn-dark btn-sm">Seç</button>
+                                </li>                                
+                              </ol>
+
+
+                      </div>
+                  </div>
+
+
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Table-->
+      </div>
+    </div>
+  </div>
+  <!--MDB Tables-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

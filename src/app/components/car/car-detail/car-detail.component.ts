@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CarDTO } from 'src/app/models/carDTO';
@@ -20,7 +20,7 @@ export class CarDetailComponent implements OnInit {
   carDetail!: CarDTO
   customer!: Customer
   rental:Rental = {} as Rental
-
+ 
 
   constructor(private carService: CarService, private activatedRoute: ActivatedRoute,
      private localStorageService: LocalStorageService, private customerService:CustomerService, 
@@ -56,8 +56,10 @@ export class CarDetailComponent implements OnInit {
 
   RentTheCar(){
     this.rentalService.checkCarAvailable(this.rental).subscribe(response =>{
-      if (response.success) {          
-        return this.router.navigate(["/payment"])
+      if (response.success) {   
+          localStorage.setItem("rental",JSON.stringify(this.rental))   
+        this.navigetToPayment()
+        return
       }
       else {
         return this.toastrService.error(response.message, "Kiralama İsteği Başarısz!")
@@ -68,4 +70,8 @@ export class CarDetailComponent implements OnInit {
       return this.toastrService.error(error.error.message)
     })   
   }
+navigetToPayment(){
+  this.router.navigate(["/payment"])
+}
+
 }
