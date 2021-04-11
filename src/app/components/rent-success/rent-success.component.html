@@ -9,18 +9,15 @@
                 <div class="card-body">
                     <h5 class="card-title">Ödeme Başarılı </h5>
                     <p class="card-text"> Kullandığınız Kredi Kartı bilgilerini kaydetmek İster misiniz.</p>
-                    <a href="#" class="btn btn-primary">Kaydet</a>
-                    <a href="#" style="margin-left: 10px;" class="btn btn-danger">Hayır Kaydetme</a>
+                    <a (click)="saveCreditCard()" class="btn btn-primary">Kaydet</a>
+                    <a (click)="notSave()" style="margin-left: 10px;" class="btn btn-danger">Hayır Kaydetme</a>
 
                 </div>
                 <div class="card-footer text-muted">
-                    <button type="button" class="btn btn-outline-dark"> Anasayfaya git</button>
+                    <button routerLink="/cars" type="button" class="btn btn-outline-dark"> Anasayfaya git</button>
 
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </div>

@@ -33,7 +33,7 @@ export class PaymentComponent implements OnInit {
   createCardForm() {
     this.cardForm = this.formBuilder.group({
       cardHolderName: ["", Validators.required],
-      userId: [this.userId],
+      userId: [parseInt(this.userId.toString())],
       cardNumber: ["", Validators.required],
       cardExprationDate: ["", Validators.required],
       cVV: ["", Validators.required]
