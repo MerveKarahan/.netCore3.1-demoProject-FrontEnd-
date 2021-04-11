@@ -1,30 +1,35 @@
-# ReCapFrontEnd
+# Araç Kiralama Uygulaması
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
-## Development server
+### Notlar
+- ReportService'deki Appsetting.Json içinde, Db Bağlantı içi  ConnectionString (PostgreSql) ve RabbitMQ için MessageBrokerOptions değerlerini Değiştirin. 
+- ContactService'deki Appsetting.Json içinde, Db Bağlantı içi  ConnectionString (PostgreSql) ve RabbitMQ için MessageBrokerOptions değerlerini Değiştirin.
+- (İki MessageBrokerOptions içindeki QueueName Aynı Olmalı)
+- SeedData Eklendi.
+- Migration'lar Otomatik Uygulanıyor.
+- Projelerin ikisini Beraber Çalıştırınız..
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+__
 
-## Code scaffolding
+- Zaman Azlığından UnitTest , FluentValidation ,Serilog ,Jwt kullanılmamıştır. Zaman olsaydı Ekleyecektim.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ 
+### Teknolojiler
+- .Net Core 3.1
+- MS SQL
+- Angular(Front-End)
+- Autofac
+- AOP(cache,perfonmance,transaction,validation)
+- Fluent Validation
+- JWT
+- .Net Core Wep API
+- Katmanlı Mimari/RepositoryPattern
+- Swagger
+- 
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 ## Araçların Listelendiği ve Güncellendiği Yer
 
 ![alt text](https://i.imgur.com/uNBC1wX.png)
